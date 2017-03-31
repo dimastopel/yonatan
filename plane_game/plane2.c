@@ -7,43 +7,46 @@
 #include <stdlib.h> 
 #include "allegroforkids.h"
 
-int screen_width = 640;
-int screen_height = 480;
+// Screen size
+#define SCREEN_WIDTH 1024
+#define SCREEN_HEIGHT 768
 
-ALLEGRO_BITMAP * plane_image;
-ALLEGRO_BITMAP * lost_image;
+// Player constants
+#define PLAYER_SIZE 50
 
-int doexit = 0;
+// Pictures
+Bitmap * plane_image;
+Bitmap * lost_image;
+
+
+// flags
+int do_exit = 0;
 int lost = 0;
 
-float player_x = 320;
+// player settings
+int player_x = 320;
 int player_speed = 5;
-int player_size = 50;
-int player_y = 400;
+int player_y = SCREEN_HEIGHT - PLAYER_SIZE - 50;
 
+// object settings
 float object_1_x;
 float object_1_y;
 float object_1_size;
-ALLEGRO_COLOR object_1_color;
-
+Color object_1_color;
 int object_1_show = 0;
-
 float object_speed = 15;
 int object_rare = 1;
 int min_object_size = 50;
 int max_object_size = 150;
 
-int current_right = 0;
-int current_left = 0;
-
 int main() {
 
-  init(screen_width, screen_height);
+  init(SCREEN_WIDTH, SCREEN_HEIGHT);
 
-  plane_image = al_load_bitmap("plane.png");
-  lost_image = al_load_bitmap("lost.png");
+  plane_image = load_bitmap("plane.png");
+  lost_image = load_bitmap("lost.png");
 
-  while (!doexit) {
+  while (!do_exit) {
 
     do_loop();
 
@@ -51,13 +54,13 @@ int main() {
 
     if (object_1_show) {
       object_1_y = object_1_y + object_speed;
-      if (object_1_y > screen_height) {
+      if (object_1_y > SCREEN_HEIGHT) {
         object_1_show = 0;
       }
     } else {
       object_1_show = get_binary(object_rare);
       if (object_1_show) {
-        object_1_x = get_random_number(0, screen_width);
+        object_1_x = get_random_number(0, SCREEN_WIDTH);
         object_1_size = get_random_number(min_object_size, max_object_size);
         object_1_y = object_1_size * -1;
         object_1_color = get_random_color();
@@ -65,35 +68,35 @@ int main() {
     }
 
     // DETECT COLLISION
-    if (is_collision(player_x, player_y, player_size, object_1_x, object_1_y, object_1_size))
+    if (is_collision(player_x, player_y, PLAYER_SIZE, object_1_x, object_1_y, object_1_size))
     {
         // we have a collision
         object_1_show = 0;
         lost = 1;
     }
 
-    // WE PAINT FROM HERE
+    // We paint from here
 
     // clear the screen
     clear_screen_rgb(163, 214, 255);
 
-    // draw plane  
+    // draw player  
     if (!lost)
     { 
-        draw_image(plane_image, player_x, player_y, player_size, player_size);
+        draw_image(plane_image, player_x, player_y, PLAYER_SIZE, PLAYER_SIZE);
     }
 
     // draw object
-    if (object_1_show) {
-      draw_rect(object_1_x, object_1_y, object_1_size, object_1_size, object_1_color);
+    if (!lost && object_1_show) 
+    {
+        draw_rect(object_1_x, object_1_y, object_1_size, object_1_size, object_1_color);
     }
 
     //draw lost / won
     if (lost)
     { 
-        draw_image(lost_image, 0, 0, screen_width, screen_height);
+        draw_image(lost_image, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     }
-
 
     // show display
     show();

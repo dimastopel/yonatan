@@ -8,6 +8,11 @@
 #define ALLEGROFORKIDS
 
 
+// Definitions
+#define Bitmap ALLEGRO_BITMAP
+#define Color ALLEGRO_COLOR
+
+
 // Variables
 
 ALLEGRO_DISPLAY *display; 
@@ -32,8 +37,10 @@ void draw_image(ALLEGRO_BITMAP *image, float x, float y, float width, float heig
 void draw_rect(float x, float y, float width, float height, ALLEGRO_COLOR color);
 void show();
 void destroy();
+Bitmap* load_bitmap(char* filename);
 
 // General functions
+
 int get_random_number(int start, int end);
 int get_binary(int rare_of_true);
 ALLEGRO_COLOR get_random_color();

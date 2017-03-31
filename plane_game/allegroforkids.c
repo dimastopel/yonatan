@@ -105,6 +105,13 @@ void destroy()
    al_destroy_display(display); // destroy display
 }
 
+Bitmap* load_bitmap(char* filename)
+{
+  return al_load_bitmap(filename);
+}
+
+
+
 int get_random_number(int start, int end)
 {
 	return (rand() % (end - start)) + start;
