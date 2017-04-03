@@ -5,7 +5,7 @@
 #include <stdio.h> 
 #include <time.h> 
 #include <stdlib.h> 
-#include "allegroforkids.h"
+#include "allegroforkids.h" 
 
 // Screen size
 #define SCREEN_WIDTH 1024
@@ -18,9 +18,7 @@
 Bitmap * plane_image;
 Bitmap * lost_image;
 
-
 // flags
-int do_exit = 0;
 int lost = 0;
 
 // player settings
@@ -46,7 +44,7 @@ int main() {
   plane_image = load_bitmap("plane.png");
   lost_image = load_bitmap("lost.png");
 
-  while (!do_exit) {
+  while (true) {
 
     do_loop();
 

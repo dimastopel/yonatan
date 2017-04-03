@@ -34,7 +34,7 @@ void clear_screen_rgb(unsigned char r, unsigned char g, unsigned char b)
 
 void do_loop()
 {
-   al_init_timeout(&timeout, 0.06);
+   al_init_timeout(&timeout, 0.001);
    al_wait_for_event_until(event_queue, &ev, &timeout);
 
    if(ev.type == ALLEGRO_EVENT_KEY_DOWN 

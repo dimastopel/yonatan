@@ -29,12 +29,15 @@ int main() {
   }
 
   
-  for (int i = 30; i < 60; i++)
+  // create hot objects
+  for (int i = 20; i < 50; i++)
   {
-    for (int j = 30; j < 60; j++)
+    for (int j = 20; j < 50; j++)
     {
       arr1[i][j] = 250;
       arr2[i][j] = 250;
+      arr1[i+20][j+20] = 250;
+      arr2[i+20][j+20] = 250;
     }
   }
 
