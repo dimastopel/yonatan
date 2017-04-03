@@ -54,10 +54,16 @@ int main() {
     // To run use: ./ex1
     //
     // Good luck!
-
+    //dddddddddddddddoooooooooooooonnnnnnnnnneeeeeeeeeeeeee!!!!!!!!!!!!!!
     // Example call
-    draw_line(10, 10, 100, 200, COLOR_VIOLET);
-
+    draw_line(0, 0, 0, 768, COLOR_RED);
+    draw_line(0, 768, 1024, 768, COLOR_RED);
+    draw_line(1024, 768, 1024, 0, COLOR_RED);
+    draw_line(1024, 0, 0, 0, COLOR_RED);
+    draw_line(341, 0, 341, 768, COLOR_RED);
+    draw_line(682, 0, 682, 768, COLOR_RED);
+    draw_line(0, 256, 1024, 256, COLOR_RED);
+    draw_line(0, 512, 1024, 512, COLOR_RED);
     ///////////////////////////
     // YOUR CODE ENDS HERE   //
     ///////////////////////////
