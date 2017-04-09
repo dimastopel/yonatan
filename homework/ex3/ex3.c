@@ -1,4 +1,3 @@
-
 //////////////////////////////////////////////////
 // This is part of exersizes for Yonatan Stopel //
 //////////////////////////////////////////////////
@@ -31,26 +30,26 @@ int main() {
     // YOUR CODE STARTS HERE //
     ///////////////////////////
 
-    // Now, that you have a table, please draw an X 
-    // in the middle square. Please see the illustration below. 
+    // Now, that you have a table and an X, please draw more Xes
+    // in all other squares. Please see the illustration below. 
     // You can use the same draw_line function. 
     //
     // ###################
-    // #     #     #     #
-    // #     #     #     #
-    // #     #     #     #
+    // # # # # # # # # # #
+    // #  #  #  #  #  #  #
+    // # # # # # # # # # #
     // ###################
-    // #     # # # #     #
-    // #     #  #  #     #
-    // #     # # # #     #
+    // # # # # # # # # # #
+    // #  #  #  #  #  #  #
+    // # # # # # # # # # #
     // ###################
-    // #     #     #     #
-    // #     #     #     #
-    // #     #     #     #
+    // # # # # # # # # # #
+    // #  #  #  #  #  #  #
+    // # # # # # # # # # #
     // ###################
     // 
     // To create the executable use: make
-    // To run use: ./ex2
+    // To run use: ./ex3
     //
     // Good luck!
 
@@ -65,6 +64,14 @@ int main() {
     
     draw_line(341, 256, 682, 512, COLOR_RED);
     draw_line(341, 512, 682, 256, COLOR_RED);
+    draw_line(1024, 0, 682, 256, COLOR_RED);
+    draw_line(682, 0, 1024, 256, COLOR_RED);
+    draw_line(0, 0, 341, 256, COLOR_RED);
+    draw_line(0, 256, 341, 0, COLOR_RED);
+    draw_line(341, 0, 682, 256, COLOR_RED);
+    draw_line(682, 0, 341, 256, COLOR_RED);
+    draw_line(341, 512, 682, 768, COLOR_RED);
+    draw_line(341, 768, 682, 512, COLOR_RED);
     ///////////////////////////
     // YOUR CODE ENDS HERE   //
     ///////////////////////////
