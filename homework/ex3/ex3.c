@@ -61,7 +61,7 @@ int main() {
     draw_line(682, 0, 682, 768, COLOR_RED);
     draw_line(0, 256, 1024, 256, COLOR_RED);
     draw_line(0, 512, 1024, 512, COLOR_RED);
-    
+    // now x time!
     draw_line(341, 256, 682, 512, COLOR_RED);
     draw_line(341, 512, 682, 256, COLOR_RED);
     draw_line(1024, 0, 682, 256, COLOR_RED);
@@ -72,6 +72,14 @@ int main() {
     draw_line(682, 0, 341, 256, COLOR_RED);
     draw_line(341, 512, 682, 768, COLOR_RED);
     draw_line(341, 768, 682, 512, COLOR_RED);
+    draw_line(0, 768, 341, 512, COLOR_RED);
+    draw_line(0, 512, 341, 768, COLOR_RED);
+    draw_line(1024, 768, 682, 512, COLOR_RED);
+    draw_line(1024, 512, 682, 768, COLOR_RED);
+    draw_line(0, 256, 341, 512, COLOR_RED);
+    draw_line(0, 512, 341, 256, COLOR_RED);
+    draw_line(682, 256, 1024, 512, COLOR_RED);
+    draw_line(682, 512, 1024, 256, COLOR_RED);
     ///////////////////////////
     // YOUR CODE ENDS HERE   //
     ///////////////////////////
