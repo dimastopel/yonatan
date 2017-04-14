@@ -82,7 +82,7 @@ int main() {
     //draw_line(682, 512, 1024, 256, COLOR_RED);
     draw_circle(170, 384,128, COLOR_RED);
     //draw_circle(200,200,50, COLOR_RED);
-    draw_circle(854, 384,128, COLOR_RED);
+    draw_circle(854, 384,128, COLOR_RED);   
     ///////////////////////////
     // YOUR CODE ENDS HERE   //
     ///////////////////////////
