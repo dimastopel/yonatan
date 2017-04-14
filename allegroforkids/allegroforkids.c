@@ -100,6 +100,10 @@ void draw_line(float x1, float y1, float x2, float y2, ALLEGRO_COLOR color)
    al_draw_line(x1, y1, x2, y2, color, 5);
 }
 
+void draw_circle(float cx, float cy, float r, ALLEGRO_COLOR color)
+{
+   al_draw_circle(cx,cy, r, color, 5);
+}
 
 void show()
 {
